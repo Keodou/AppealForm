@@ -1,0 +1,15 @@
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.DAL\bin\Debug\net7.0\AppealForm.DAL.deps.json
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.DAL\bin\Debug\net7.0\AppealForm.DAL.dll
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.DAL\bin\Debug\net7.0\AppealForm.DAL.pdb
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.DAL\bin\Debug\net7.0\AppealForm.Domain.dll
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.DAL\bin\Debug\net7.0\AppealForm.Domain.pdb
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.DAL\obj\Debug\net7.0\AppealForm.DAL.csproj.AssemblyReference.cache
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.DAL\obj\Debug\net7.0\AppealForm.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.DAL\obj\Debug\net7.0\AppealForm.DAL.AssemblyInfoInputs.cache
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.DAL\obj\Debug\net7.0\AppealForm.DAL.AssemblyInfo.cs
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.DAL\obj\Debug\net7.0\AppealForm.DAL.csproj.CoreCompileInputs.cache
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.DAL\obj\Debug\net7.0\AppealForm.DAL.csproj.CopyComplete
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.DAL\obj\Debug\net7.0\AppealForm.DAL.dll
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.DAL\obj\Debug\net7.0\refint\AppealForm.DAL.dll
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.DAL\obj\Debug\net7.0\AppealForm.DAL.pdb
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.DAL\obj\Debug\net7.0\ref\AppealForm.DAL.dll

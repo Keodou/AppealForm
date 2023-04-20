@@ -1,0 +1,12 @@
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.Domain\bin\Debug\net7.0\AppealForm.Domain.deps.json
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.Domain\bin\Debug\net7.0\AppealForm.Domain.dll
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.Domain\bin\Debug\net7.0\AppealForm.Domain.pdb
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.Domain\obj\Debug\net7.0\AppealForm.Domain.csproj.AssemblyReference.cache
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.Domain\obj\Debug\net7.0\AppealForm.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.Domain\obj\Debug\net7.0\AppealForm.Domain.AssemblyInfoInputs.cache
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.Domain\obj\Debug\net7.0\AppealForm.Domain.AssemblyInfo.cs
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.Domain\obj\Debug\net7.0\AppealForm.Domain.csproj.CoreCompileInputs.cache
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.Domain\obj\Debug\net7.0\AppealForm.Domain.dll
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.Domain\obj\Debug\net7.0\refint\AppealForm.Domain.dll
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.Domain\obj\Debug\net7.0\AppealForm.Domain.pdb
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.Domain\obj\Debug\net7.0\ref\AppealForm.Domain.dll
