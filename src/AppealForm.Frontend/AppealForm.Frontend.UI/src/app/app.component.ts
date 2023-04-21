@@ -14,7 +14,7 @@ export class AppComponent {
   constructor(private messageService: MessageService) { }
 
   ngOnInit() : void {
-    this.messages = this.messageService.getMessages();
-    console.log(this.messages);
+    this.messageService
+      .getMessages().subscribe((result: Message[]) => (this.messages = result));
   }
 }

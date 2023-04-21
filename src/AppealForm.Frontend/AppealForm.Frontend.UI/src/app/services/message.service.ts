@@ -1,20 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Message } from '../models/message';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MessageService {
+  private url = "Messages";
+  constructor(private http: HttpClient) { }
 
-  constructor() { }
-
-  public getMessages() : Message[] {
-    let message = new Message;
-    message.id = 1;
-    message.text = "Новая запись на ангуляре";
-    message.contactId = 1;
-    message.topicId = 1;
-
-    return [message];
+  public getMessages() : Observable<Message[]> {
+    return this.http.get<Message[]>(`${environment.apiUrl}/${this.url}`);
   }
 }
