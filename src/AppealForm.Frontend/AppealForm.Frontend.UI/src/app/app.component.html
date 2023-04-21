@@ -1,0 +1,14 @@
+<table>
+  <thead>
+    <th>Текст</th>
+    <th>Темы</th>
+    <th>Контакты</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let message of messages">
+      <td>{{ message.text }}</td>
+      <td>{{ message.topicId }}</td>
+      <td>{{ message.contactId }}</td>
+    </tr>
+  </tbody>
+</table>
