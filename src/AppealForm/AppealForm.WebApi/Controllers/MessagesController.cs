@@ -25,8 +25,14 @@ namespace AppealForm.WebApi.Controllers
             return CreatedAtAction(nameof(GetMessage), new { id = message.Id }, message);
         }
 
+        [HttpGet]
+        public async Task<ActionResult<List<Message>>> GetMessages()
+        {
+            return await _dbContext.Messages.ToListAsync();
+        }
+
         [HttpGet("{id}")]
-        public async Task<ActionResult<Message>> GetMessage(Guid id)
+        public async Task<ActionResult<Message>> GetMessage(int id)
         {
             var message = await _dbContext.Messages.FindAsync(id);
 
@@ -39,7 +45,7 @@ namespace AppealForm.WebApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutMessage(Guid id, Message message)
+        public async Task<IActionResult> PutMessage(int id, Message message)
         {
             if (id != message.Id)
             {
@@ -67,7 +73,7 @@ namespace AppealForm.WebApi.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteMessage(Guid id)
+        public async Task<IActionResult> DeleteMessage(int id)
         {
             var message = await _dbContext.Messages.FindAsync(id);
             if (message == null)
@@ -81,7 +87,7 @@ namespace AppealForm.WebApi.Controllers
             return NoContent();
         }
 
-        private bool MessageItemExists(Guid id)
+        private bool MessageItemExists(int id)
         {
             return _dbContext.Messages.Any(m => m.Id == id);
         }
