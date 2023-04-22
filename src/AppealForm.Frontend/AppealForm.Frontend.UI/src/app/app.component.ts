@@ -10,11 +10,20 @@ import { MessageService } from './services/message.service';
 export class AppComponent {
   title = 'AppealForm.Frontend.UI';
   messages: Message[] = [];
+  messageToEdit?: Message;
 
   constructor(private messageService: MessageService) { }
 
   ngOnInit() : void {
     this.messageService
       .getMessages().subscribe((result: Message[]) => (this.messages = result));
+  }
+
+  updateMessageList(messages: Message[]) {
+    this.messages = messages;
+  }
+
+  initMessage() {
+    this.messageToEdit = new Message();
   }
 }

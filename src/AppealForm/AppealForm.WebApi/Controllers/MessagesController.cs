@@ -49,7 +49,7 @@ namespace AppealForm.WebApi.Controllers
         {
             if (id != message.Id)
             {
-                return BadRequest();
+                return BadRequest("Message not found.");
             }
             _dbContext.Entry(message).State = EntityState.Modified;
 

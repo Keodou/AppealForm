@@ -1,3 +1,5 @@
+<button (click)="initMessage()">Create message</button>
+
 <table>
   <thead>
     <th>Текст</th>
@@ -12,3 +14,5 @@
     </tr>
   </tbody>
 </table>
+
+<app-edit-message [message]="messageToEdit" (messagesUpdated)="updateMessageList($event)"></app-edit-message>

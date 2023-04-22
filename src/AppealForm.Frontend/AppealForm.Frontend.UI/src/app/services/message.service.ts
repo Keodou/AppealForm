@@ -14,4 +14,8 @@ export class MessageService {
   public getMessages() : Observable<Message[]> {
     return this.http.get<Message[]>(`${environment.apiUrl}/${this.url}`);
   }
+
+  public createMessage(message: Message) : Observable<Message[]> {
+    return this.http.post<Message[]>(`${environment.apiUrl}/${this.url}`, message);
+  }
 }

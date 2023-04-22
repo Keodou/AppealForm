@@ -1,0 +1,16 @@
+<div *ngIf="message">
+    <h2>{{ message.text }}</h2>
+    <div>
+        Text:
+        <input [(ngModel)]="message.text" placeholder="Name"/>
+    </div>
+    <div>
+        Contact:
+        <input [(ngModel)]="message.contactId" placeholder="Contact"/>
+    </div>
+    <div>
+        Topic:
+        <input [(ngModel)]="message.topicId" placeholder="Topic"/>
+    </div>
+    <button (click)="createMessage(message)" *ngIf="!message.id">Save</button>
+</div>
