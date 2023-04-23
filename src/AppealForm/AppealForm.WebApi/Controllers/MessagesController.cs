@@ -32,9 +32,11 @@ namespace AppealForm.WebApi.Controllers
                 .Select(m => new
                 {
                     m.Id,
+                    ContactName = m.Contact.Name,
+                    ContactEmail = m.Contact.Email,
+                    ContactPhone = m.Contact.Phone,
                     m.Text,
                     m.TopicId,
-                    ContactName = m.Contact.Name
                 })
                 .ToListAsync();
             return Ok(messages);
