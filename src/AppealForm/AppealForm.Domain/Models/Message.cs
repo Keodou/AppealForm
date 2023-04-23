@@ -9,5 +9,9 @@
         public int ContactId { get; set; }
 
         public int TopicId { get; set; }
+
+        public Contact Contact { get; set; }
+
+        //public Topic Topic { get; set; }
     }
 }

@@ -1,6 +1,9 @@
-export class Message {
+import { Contact } from "./contact";
+
+export interface Message {
     id?: number;
-    text = "";
-    contactId?: number;
+    text: string;
+    //contactId?: number;
     topicId?: number
+    contact: Contact;
 }

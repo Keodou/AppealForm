@@ -10,7 +10,7 @@
     <tr *ngFor="let message of messages">
       <td>{{ message.text }}</td>
       <td>{{ message.topicId }}</td>
-      <td>{{ message.contactId }}</td>
+      <td>{{ message.contact.name }}</td>
     </tr>
   </tbody>
 </table>

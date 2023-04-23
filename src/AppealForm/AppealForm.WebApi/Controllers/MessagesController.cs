@@ -28,7 +28,23 @@ namespace AppealForm.WebApi.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Message>>> GetMessages()
         {
-            return await _dbContext.Messages.ToListAsync();
+            var messages = await _dbContext.Messages
+                .Select(m => new
+                {
+                    m.Id,
+                    m.Text,
+                    m.TopicId,
+                    ContactName = m.Contact.Name
+                })
+                .ToListAsync();
+            return Ok(messages);
+        }
+
+        [HttpGet("{contactId}/messages")]
+        public async Task<IActionResult> GetMessagesByContactId(int contactId)
+        {
+            var messages = await _dbContext.Messages.Where(m => m.ContactId == contactId).ToListAsync();
+            return Ok(messages);
         }
 
         [HttpGet("{id}")]
