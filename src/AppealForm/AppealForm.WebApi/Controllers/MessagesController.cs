@@ -17,12 +17,49 @@ namespace AppealForm.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Message>> PostMessage(Message message)
+        public async Task<ActionResult<Message>> PostMessage(MessageDTO messageDTO)
         {
-            _dbContext.Messages.Add(message);
-            await _dbContext.SaveChangesAsync();
+            var contact = await _dbContext.Contacts
+                .FirstOrDefaultAsync(c => c.Name == messageDTO.ContactName
+                    && c.Email == messageDTO.ContactEmail
+                    && c.Phone == messageDTO.ContactPhone);
+            var topic = await _dbContext.Topics
+                .FirstOrDefaultAsync(c => c.Name == messageDTO.TopicName);
 
-            return CreatedAtAction(nameof(GetMessage), new { id = message.Id }, message);
+            if (contact != null && topic != null)
+            {
+                var message = new Message
+                {
+                    Text = messageDTO.Text,
+                    Contact = contact,
+                    Topic = topic
+                };
+                _dbContext.Messages.Add(message);
+                await _dbContext.SaveChangesAsync();
+                return Ok(message);
+            }
+
+            else
+            {
+                var newContact = new Contact
+                {
+                    Name = messageDTO.ContactName,
+                    Email = messageDTO.ContactEmail,
+                    Phone = messageDTO.ContactPhone
+                };
+                var message = new Message
+                {
+                    Text = messageDTO.Text,
+                    Contact = newContact,
+                    Topic = topic
+                };
+
+                _dbContext.Contacts.Add(newContact);
+
+                await _dbContext.SaveChangesAsync();
+                //return CreatedAtAction(nameof(GetMessage), new { id = message.Id }, message);
+                return Ok(message);
+            }
         }
 
         [HttpGet]
@@ -35,6 +72,7 @@ namespace AppealForm.WebApi.Controllers
                     ContactName = m.Contact.Name,
                     ContactEmail = m.Contact.Email,
                     ContactPhone = m.Contact.Phone,
+                    MessageTopic = m.Topic.Name,
                     m.Text,
                     m.TopicId,
                 })

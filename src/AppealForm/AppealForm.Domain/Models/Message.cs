@@ -12,6 +12,6 @@
 
         public Contact Contact { get; set; }
 
-        //public Topic Topic { get; set; }
+        public Topic Topic { get; set; }
     }
 }
