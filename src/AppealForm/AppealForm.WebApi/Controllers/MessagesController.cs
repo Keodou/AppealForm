@@ -2,6 +2,8 @@
 using AppealForm.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace AppealForm.WebApi.Controllers
 {
@@ -63,21 +65,23 @@ namespace AppealForm.WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Message>>> GetMessages()
+        public async Task<ActionResult<List<MessageDTO>>> GetMessages()
         {
             var messages = await _dbContext.Messages
-                .Select(m => new
+                .Include(m => m.Contact)
+                .Include(m => m.Topic)
+                .Select(m => new MessageDTO
                 {
-                    m.Id,
                     ContactName = m.Contact.Name,
                     ContactEmail = m.Contact.Email,
                     ContactPhone = m.Contact.Phone,
-                    MessageTopic = m.Topic.Name,
-                    m.Text,
-                    m.TopicId,
+                    TopicName = m.Topic.Name,
+                    Text = m.Text
                 })
                 .ToListAsync();
-            return Ok(messages);
+
+            //return Ok(JsonSerializer.Serialize(messages));
+            return Ok(JsonConvert.SerializeObject(messages));
         }
 
         [HttpGet("{contactId}/messages")]
@@ -113,7 +117,7 @@ namespace AppealForm.WebApi.Controllers
             {
                 await _dbContext.SaveChangesAsync();
             }
-            catch (DbUpdateConcurrencyException) 
+            catch (DbUpdateConcurrencyException)
             {
                 if (!MessageItemExists(id))
                 {
@@ -146,6 +150,6 @@ namespace AppealForm.WebApi.Controllers
         private bool MessageItemExists(int id)
         {
             return _dbContext.Messages.Any(m => m.Id == id);
-        }
+        } 
     }
 }

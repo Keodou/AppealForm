@@ -1,12 +1,12 @@
 import { Contact } from "./contact";
 
 export interface Message {
-    id?: number;
-    text: string;
+    //id?: number;
     contactName: string;
     contactEmail: string;
     contactPhone: string;
     //contactId?: number;
-    topicId?: number;
+    topicName: string;
+    text: string;
     //contact: Contact;
 }

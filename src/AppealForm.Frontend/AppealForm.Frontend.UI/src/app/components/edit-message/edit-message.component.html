@@ -1,16 +1,24 @@
 <div *ngIf="message">
     <h2>{{ message.text }}</h2>
     <div>
-        Text:
-        <input [(ngModel)]="message.text" placeholder="Name"/>
-    </div>
-    <div>
         Contact:
         <input [(ngModel)]="message.contactName" placeholder="Contact"/>
     </div>
     <div>
-        Topic:
-        <input [(ngModel)]="message.topicId" placeholder="Topic"/>
+        Email:
+        <input [(ngModel)]="message.contactEmail" placeholder="Contact"/>
     </div>
-    <button (click)="createMessage(message)" *ngIf="!message.id">Save</button>
+    <div>
+        Phone:
+        <input [(ngModel)]="message.contactPhone" placeholder="Contact"/>
+    </div>
+    <div>
+        Topic:
+        <input [(ngModel)]="message.topicName" placeholder="Topic"/>
+    </div>
+    <div>
+        Text:
+        <input [(ngModel)]="message.text" placeholder="Name"/>
+    </div>
+    <button>Save</button>
 </div>

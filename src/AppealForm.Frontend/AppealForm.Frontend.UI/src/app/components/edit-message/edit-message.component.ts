@@ -16,9 +16,9 @@ export class EditMessageComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  createMessage(message: Message) {
+  /*createMessage(message: Message) {
     this.messageService
       .createMessage(message)
       .subscribe((messages: Message[]) => this.messagesUpdated.emit(messages));
-  }
+  }*/
 }

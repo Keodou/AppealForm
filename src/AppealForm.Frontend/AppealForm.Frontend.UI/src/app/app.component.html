@@ -1,18 +1,23 @@
-<button (click)="initMessage()">Create message</button>
-
-<table>
-  <thead>
-    <th>Текст</th>
-    <th>Темы</th>
-    <th>Контакты</th>
-  </thead>
-  <tbody>
-    <tr *ngFor="let message of messages">
-      <td>{{ message.text }}</td>
-      <td>{{ message.topicId }}</td>
-      <td>{{ message.contactName }}</td>
-    </tr>
-  </tbody>
-</table>
-
-<app-edit-message [message]="messageToEdit" (messagesUpdated)="updateMessageList($event)"></app-edit-message>
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label>Contact Name:</label>
+    <input type="text" [(ngModel)]="message.contactName" name="contactName">
+  </div>
+  <div>
+    <label>Contact Email:</label>
+    <input type="email" [(ngModel)]="message.contactEmail" name="contactEmail">
+  </div>
+  <div>
+    <label>Contact Phone:</label>
+    <input type="tel" [(ngModel)]="message.contactPhone" name="contactPhone">
+  </div>
+  <div>
+    <label>Topic Name:</label>
+    <input type="text" [(ngModel)]="message.topicName" name="topicName">
+  </div>
+  <div>
+    <label>Text:</label>
+    <textarea [(ngModel)]="message.text" name="text"></textarea>
+  </div>
+  <button type="submit">Add Message</button>
+</form>
