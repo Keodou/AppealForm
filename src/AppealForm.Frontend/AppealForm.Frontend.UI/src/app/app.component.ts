@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { Message } from './models/message';
 import { MessageService } from './services/message.service';
-//import { ContactService } from './services/contact.service';
-//import { Contact } from './models/contact';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +10,6 @@ import { MessageService } from './services/message.service';
 })
 export class AppComponent {
   title = 'AppealForm.Frontend.UI';
-  //messages: Message[] = [];
-  //contacts: Contact[] = [];
-  //messageToEdit?: Message;
   message: Message = {
     contactName: '',
     contactEmail: '',
@@ -22,24 +17,18 @@ export class AppComponent {
     topicName: '',
     text: '',
   };
+  formData: FormData = new FormData();
+  savedMessage: any;
+  showForm: boolean = true;
 
   constructor(private messageService: MessageService) { }
 
   onSubmit() {
-    this.messageService.createMessage(this.message).subscribe(() => console.log("message added successfully"));
+    this.messageService.createMessage(this.message).subscribe((response: any) => {
+      console.log("message added successfully");
+      this.savedMessage = response;
+      this.formData = new FormData();
+      this.showForm = false;
+    });
   }
-  /*ngOnInit() : void {
-    /*this.messageService
-      .getMessages().subscribe((result: Message[]) => (this.messages = result));
-    /*this.contactService
-      .getContacts().subscribe((result: Contact[]) => (this.contacts = result));
-  }*/
-
-  /*updateMessageList(messages: Message[]) {
-    this.messages = messages;
-  }*/
-
-  /*initMessage() {
-    //this.messageToEdit = new Message();
-  }*/
 }

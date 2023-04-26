@@ -21,3 +21,8 @@
   </div>
   <button type="submit">Add Message</button>
 </form>
+
+<div *ngIf="savedMessage" class="saved-message">
+  <h2>Сообщение сохранено:</h2>
+  <p>{{ savedMessage.text }}</p>
+</div>
