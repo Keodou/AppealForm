@@ -20,8 +20,13 @@ export class AppComponent {
   formData: FormData = new FormData();
   savedMessage: any;
   showForm: boolean = true;
+  captchaResolved = false;
 
   constructor(private messageService: MessageService) { }
+
+  resolved(captchaResponse: string) {
+    this.captchaResolved = true;
+  }
 
   onSubmit() {
     this.messageService.createMessage(this.message).subscribe((response: any) => {
