@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { EditMessageComponent } from './components/edit-message/edit-message.component';
 import { FormsModule } from '@angular/forms';
 import { RecaptchaModule } from 'ng-recaptcha';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask} from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,13 @@ import { RecaptchaModule } from 'ng-recaptcha';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    RecaptchaModule
+    RecaptchaModule,
+    NgxMaskDirective,
+    NgxMaskPipe
   ],
-  providers: [],
+  providers: [
+    provideNgxMask(),
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -15,7 +15,7 @@
     <div class="form-group">
       <label>Ваш телефон:</label>
       <input class="form-control" type="tel" [(ngModel)]="message.contactPhone" name="contactPhone" #phone="ngModel"
-      required pattern="[0-9]{11}" />
+      prefix="+7" required mask="(000) 000-00-00" [showMaskTyped]="true" />
     </div>
     <div class="form-group">
       <label>Тема:</label>
