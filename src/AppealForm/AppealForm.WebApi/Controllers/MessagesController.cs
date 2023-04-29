@@ -30,17 +30,16 @@ namespace AppealForm.WebApi.Controllers
 
             if (contact != null && topic != null)
             {
-                var message = new Message
+                var newMessage = new Message
                 {
                     Text = messageDTO.Text,
                     Contact = contact,
                     Topic = topic
                 };
-                _dbContext.Messages.Add(message);
+                _dbContext.Messages.Add(newMessage);
                 await _dbContext.SaveChangesAsync();
-                return Ok(message);
+                return Ok(newMessage);
             }
-
             else
             {
                 var newContact = new Contact
@@ -57,6 +56,7 @@ namespace AppealForm.WebApi.Controllers
                 };
 
                 _dbContext.Contacts.Add(newContact);
+                _dbContext.Messages.Add(message);
 
                 await _dbContext.SaveChangesAsync();
                 //return CreatedAtAction(nameof(GetMessage), new { id = message.Id }, message);
@@ -150,6 +150,6 @@ namespace AppealForm.WebApi.Controllers
         private bool MessageItemExists(int id)
         {
             return _dbContext.Messages.Any(m => m.Id == id);
-        } 
+        }
     }
 }
