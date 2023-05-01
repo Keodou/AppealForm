@@ -29,6 +29,7 @@ export class AppComponent {
   }
 
   onSubmit() {
+    this.message.contactPhone = '+7' + this.message.contactPhone;
     this.messageService.createMessage(this.message).subscribe((response: any) => {
       console.log("message added successfully");
       this.savedMessage = response;
