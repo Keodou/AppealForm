@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "NQ5svwFlE7ykmGHvPdB5l3OzmMAtN0NU+8nazHQABmg=",
+  "Source": "AppealForm.WebApi",
+  "BasePath": "_content/AppealForm.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,3 @@
+D:\Programming\CSharp\AppealForm\src\AppealForm\publish\AppealForm.Domain.dll
+D:\Programming\CSharp\AppealForm\src\AppealForm\publish\AppealForm.Domain.deps.json
+D:\Programming\CSharp\AppealForm\src\AppealForm\publish\AppealForm.Domain.pdb

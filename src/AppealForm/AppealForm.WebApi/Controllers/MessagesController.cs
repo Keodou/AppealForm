@@ -59,18 +59,5 @@ namespace AppealForm.WebApi.Controllers
                 return Ok(message);
             }
         }
-
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Message>> GetMessage(int id)
-        {
-            var message = await _dbContext.Messages.FindAsync(id);
-
-            if (message == null)
-            {
-                return NotFound();
-            }
-
-            return message;
-        }
     }
 }

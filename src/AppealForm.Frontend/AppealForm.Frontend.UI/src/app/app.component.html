@@ -46,6 +46,10 @@
 <div class="container d-flex p-3 align-items-center justify-content-center" *ngIf="!showForm">
   <div class="saved-message">
     <h2>Сообщение сохранено:</h2>
+    <p>{{ savedMessage.contactName }}</p>
+    <p>{{ savedMessage.contactEmail }}</p>
+    <p>{{ savedMessage.contactPhone }}</p>
+    <p>{{ savedMessage.topicName }}</p>
     <p>{{ savedMessage.text }}</p>
   </div>
 </div>

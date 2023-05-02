@@ -5,7 +5,6 @@ using System.Text.Json.Serialization;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
@@ -20,7 +19,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddCors(opt => opt.AddPolicy(name: "MessagesOrigins",
     policy =>
     {
-        policy.WithOrigins("http://localhost:4200")
+        policy.WithOrigins("https://appealform.firebaseapp.com")
             .AllowAnyMethod()
             .AllowAnyHeader()
             .AllowCredentials();

@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/appeal-form.frontend.ui",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

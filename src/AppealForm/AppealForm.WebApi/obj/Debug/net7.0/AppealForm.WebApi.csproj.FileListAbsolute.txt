@@ -278,3 +278,8 @@ D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.WebApi\bin\Debug\net7
 D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.WebApi\bin\Debug\net7.0\AppealForm.Domain.dll
 D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.WebApi\bin\Debug\net7.0\AppealForm.DAL.pdb
 D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.WebApi\bin\Debug\net7.0\AppealForm.Domain.pdb
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.WebApi\bin\Debug\net7.0\publish\web.config
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.WebApi\bin\Debug\net7.0\publish\AppealForm.WebApi.deps.json
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.WebApi\bin\Debug\net7.0\publish\AppealForm.WebApi.runtimeconfig.json
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.WebApi\bin\Debug\net7.0\publish\appsettings.Development.json
+D:\Programming\CSharp\AppealForm\src\AppealForm\AppealForm.WebApi\bin\Debug\net7.0\publish\appsettings.json

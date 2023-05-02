@@ -1,0 +1,15 @@
+D:\Programming\CSharp\AppealForm\src\AppealForm\publish\AppealForm.DAL.dll
+D:\Programming\CSharp\AppealForm\src\AppealForm\publish\AppealForm.DAL.deps.json
+D:\Programming\CSharp\AppealForm\src\AppealForm\publish\AppealForm.DAL.pdb
+D:\Programming\CSharp\AppealForm\src\AppealForm\publish\Microsoft.EntityFrameworkCore.dll
+D:\Programming\CSharp\AppealForm\src\AppealForm\publish\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Programming\CSharp\AppealForm\src\AppealForm\publish\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Programming\CSharp\AppealForm\src\AppealForm\publish\Microsoft.Extensions.Caching.Memory.dll
+D:\Programming\CSharp\AppealForm\src\AppealForm\publish\Microsoft.Extensions.DependencyInjection.dll
+D:\Programming\CSharp\AppealForm\src\AppealForm\publish\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Programming\CSharp\AppealForm\src\AppealForm\publish\Microsoft.Extensions.Logging.dll
+D:\Programming\CSharp\AppealForm\src\AppealForm\publish\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Programming\CSharp\AppealForm\src\AppealForm\publish\Microsoft.Extensions.Options.dll
+D:\Programming\CSharp\AppealForm\src\AppealForm\publish\Microsoft.Extensions.Primitives.dll
+D:\Programming\CSharp\AppealForm\src\AppealForm\publish\AppealForm.Domain.dll
+D:\Programming\CSharp\AppealForm\src\AppealForm\publish\AppealForm.Domain.pdb
